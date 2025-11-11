@@ -1,3 +1,4 @@
+import 'package:ecom_app/screens/Home/Widget/category.dart';
 import 'package:ecom_app/screens/Home/Widget/home_appbar.dart';
 import 'package:ecom_app/screens/Home/Widget/image_slider.dart';
 import 'package:ecom_app/screens/Home/Widget/search_bar.dart';
@@ -11,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int currentSlider = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +30,20 @@ class _HomeScreenState extends State<HomeScreen> {
               // for search bar
               const MySearchBar(),
               const SizedBox(height: 20),
-              const ImageSlider(),
+              ImageSlider(
+                currentSlide: currentSlider,
+                onChange: (value) {
+                  setState(() {
+                    currentSlider = value;
+                  });
+                },
+              ),
+              const SizedBox(height: 20),
+              // for category selection
+              const Categories(),
+              const SizedBox(height: 20),
+              // for product list
+              // ProductList(),
             ],
           ),
         ),

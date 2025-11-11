@@ -31,7 +31,8 @@ class ImageSlider extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
+        Positioned.fill(
+          bottom: 10,
           child: Align(
             alignment: Alignment.bottomCenter,
             child: Row(
@@ -39,13 +40,16 @@ class ImageSlider extends StatelessWidget {
               children: List.generate(
                 5,
                 (index) => AnimatedContainer(
-                  duration: Duration(microseconds: 300),
-                  width: currentSlide == index ? 15 : 0,
+                  duration: const Duration(microseconds: 300),
+                  width: currentSlide == index ? 15 : 8,
                   height: 8,
                   margin: EdgeInsets.only(right: 3),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    // color:currentSlide
+                    color: currentSlide == index
+                        ? Colors.black
+                        : Colors.transparent,
+                    border: Border.all(color: Colors.black),
                   ),
                 ),
               ),
