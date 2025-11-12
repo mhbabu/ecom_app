@@ -12,7 +12,7 @@ class DetailAppBar extends StatelessWidget {
           IconButton(
             style: IconButton.styleFrom(
               backgroundColor: Colors.white,
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(16.0),
             ),
             onPressed: () {
               Navigator.pop(context);

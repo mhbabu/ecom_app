@@ -32,7 +32,7 @@ class ImageSlider extends StatelessWidget {
           ),
         ),
         Positioned.fill(
-          bottom: 10,
+          // bottom: 10,
           child: Align(
             alignment: Alignment.bottomCenter,
             child: Row(
