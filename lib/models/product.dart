@@ -76,4 +76,16 @@ final List<Product> products = [
     rate: 4.4,
     quantity: 1,
   ),
+  Product(
+    title: "Mens Jacket",
+    description: "Fast charging pad compatible with all Qi-enabled devices.",
+    image: "images/jacket.jpeg",
+    review: "1.2k Reviews",
+    seller: "ChargeHub",
+    price: 19.99,
+    colors: [Colors.black, Colors.white],
+    category: "Gadgets",
+    rate: 4.4,
+    quantity: 1,
+  ),
 ];

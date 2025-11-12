@@ -1,7 +1,8 @@
 import 'package:ecom_app/constants.dart';
 import 'package:ecom_app/models/product.dart';
+import 'package:ecom_app/screens/Detail/Widget/item_detail.dart';
 import 'package:ecom_app/screens/Detail/detail_appbar.dart';
-import 'package:ecom_app/screens/Detail/image_slider.dart';
+import 'package:ecom_app/screens/Detail/Widget/image_slider.dart';
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class DetailScreen extends StatefulWidget {
 
 class _DetailScreenState extends State<DetailScreen> {
   int currentImage = 0;
-  int currentSlide = 0;
+  // int currentSlide = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,6 +51,29 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                 ),
               ),
+            ),
+            const SizedBox(height: 20),
+            Container(
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40),
+                ),
+              ),
+              padding: const EdgeInsets.only(
+                left: 20,
+                right: 20,
+                top: 20,
+                bottom: 200,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // product name, price, ratings and seller
+                  ItemDetails(product: widget.product),
+              ],)
             ),
           ],
         ),

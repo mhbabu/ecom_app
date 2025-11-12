@@ -6,15 +6,17 @@ class DetailAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(16.0),
       child: Row(
         children: [
           IconButton(
             style: IconButton.styleFrom(
               backgroundColor: Colors.white,
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.all(20.0),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             iconSize: 30,
             icon: const Icon(Icons.arrow_back_ios),
           ),
