@@ -2,8 +2,8 @@ import 'package:ecom_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class Description extends StatelessWidget {
-  final String text;
-  const Description({super.key, required this.text});
+  final String description;
+  const Description({super.key, required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +47,11 @@ class Description extends StatelessWidget {
               ),
             ),
           ],
+        ),
+        const SizedBox(height: 20),
+        Text(
+          description,
+          style: const TextStyle(fontSize: 16, color: Colors.grey),
         ),
       ],
     );

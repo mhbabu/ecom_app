@@ -1,5 +1,6 @@
 import 'package:ecom_app/constants.dart';
 import 'package:ecom_app/models/product.dart';
+import 'package:ecom_app/screens/Detail/Widget/add_to_cart.dart';
 import 'package:ecom_app/screens/Detail/Widget/description.dart';
 import 'package:ecom_app/screens/Detail/Widget/item_detail.dart';
 import 'package:ecom_app/screens/Detail/detail_appbar.dart';
@@ -21,6 +22,8 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kcontentColor,
+      //for add to cart, icon and quantity
+      floatingActionButton: AddToCart(product: widget.product),
       body: SafeArea(
         child: Column(
           children: [
@@ -122,7 +125,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                   const SizedBox(height: 20),
                   //for description
-                  Description(text: widget.product.description),
+                  Description(description: widget.product.description),
                 ],
               ),
             ),
