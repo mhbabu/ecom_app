@@ -11,6 +11,7 @@ class Description extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
               width: 120,
@@ -27,6 +28,22 @@ class Description extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                 ),
+              ),
+            ),
+            const Text(
+              "Specifications",
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+            const Text(
+              "Reviews",
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
               ),
             ),
           ],
