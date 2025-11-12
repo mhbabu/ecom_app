@@ -1,6 +1,8 @@
+import 'package:ecom_app/models/product.dart';
 import 'package:ecom_app/screens/Home/Widget/category.dart';
 import 'package:ecom_app/screens/Home/Widget/home_appbar.dart';
 import 'package:ecom_app/screens/Home/Widget/image_slider.dart';
+import 'package:ecom_app/screens/Home/Widget/product_cart.dart';
 import 'package:ecom_app/screens/Home/Widget/search_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -41,9 +43,38 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 20),
               // for category selection
               const Categories(),
-              const SizedBox(height: 20),
-              // for product list
-              // ProductList(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Special For You",
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.w800),
+                  ),
+                  Text(
+                    "See all",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                      color: Colors.black54,
+                    ),
+                  ),
+                ],
+              ),
+              // for shoping items
+              GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: 0.78,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20,
+                ),
+                itemCount: products.length,
+                itemBuilder: (context, index) {
+                  return ProductCart(product: products[index]);
+                },
+              ),
             ],
           ),
         ),
