@@ -29,7 +29,8 @@ class Product {
 final List<Product> products = [
   Product(
     title: "Headphones",
-    description: "High-quality wireless headphones with noise cancellation.",
+    description:
+        "Lorem ipsum is a placeholder text used in design and printing to fill the space where real content will eventually go, allowing designers to focus on the visual layout rather than the text itself. The phrase is derived from a jumbled, nonsensical Latin text from a 15th-century type specimen book, which was itself a distorted version of a 45 B.C. work by Cicero. high-quality wireless headphones with noise cancellation.",
     image: "images/wireless2.jpeg",
     review: "4.5k Reviews",
     seller: "SoundMax Store",
@@ -41,7 +42,9 @@ final List<Product> products = [
   ),
   Product(
     title: "Mouse",
-    description: "Ergonomic wireless mouse with long battery life.",
+    description:
+        "Lorem ipsum is a placeholder text used in design and printing to fill the space where real content will eventually go, allowing designers to focus on the visual layout rather than the text itself. The phrase is derived from a jumbled, nonsensical Latin text from a 15th-century type specimen book, which was itself a distorted version of a 45 B.C. work by Cicero. high-quality wireless headphones with noise cancellation.",
+
     image: "images/wireless.png",
     review: "2.1k Reviews",
     seller: "TechZone",
@@ -54,7 +57,8 @@ final List<Product> products = [
   Product(
     title: "Bluetooth Speaker",
     description:
-        "Portable wireless speaker with deep bass and 12-hour battery.",
+        "Lorem ipsum is a placeholder text used in design and printing to fill the space where real content will eventually go, allowing designers to focus on the visual layout rather than the text itself. The phrase is derived from a jumbled, nonsensical Latin text from a 15th-century type specimen book, which was itself a distorted version of a 45 B.C. work by Cicero. high-quality wireless headphones with noise cancellation.",
+
     image: "images/wireless.png",
     review: "3.8k Reviews",
     seller: "MusicBox",
@@ -66,7 +70,9 @@ final List<Product> products = [
   ),
   Product(
     title: "Mens Jacket",
-    description: "Fast charging pad compatible with all Qi-enabled devices.",
+    description:
+        "Lorem ipsum is a placeholder text used in design and printing to fill the space where real content will eventually go, allowing designers to focus on the visual layout rather than the text itself. The phrase is derived from a jumbled, nonsensical Latin text from a 15th-century type specimen book, which was itself a distorted version of a 45 B.C. work by Cicero. high-quality wireless headphones with noise cancellation.",
+
     image: "images/jacket.jpeg",
     review: "1.2k Reviews",
     seller: "ChargeHub",
@@ -78,7 +84,8 @@ final List<Product> products = [
   ),
   Product(
     title: "Mens Jacket",
-    description: "Fast charging pad compatible with all Qi-enabled devices.",
+    description:
+        "Lorem ipsum is a placeholder text used in design and printing to fill the space where real content will eventually go, allowing designers to focus on the visual layout rather than the text itself. The phrase is derived from a jumbled, nonsensical Latin text from a 15th-century type specimen book, which was itself a distorted version of a 45 B.C. work by Cicero. high-quality wireless headphones with noise cancellation.",
     image: "images/jacket.jpeg",
     review: "1.2k Reviews",
     seller: "ChargeHub",
