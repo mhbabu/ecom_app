@@ -28,33 +28,65 @@ class ProductCart extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(
-              child: Hero(
-                tag: product.image,
-                child: Image.asset(
-                  product.image,
-                  width: 130,
-                  height: 130,
-                  fit: BoxFit.cover,
+            // ✅ Image + Heart Button on Top Right
+            Stack(
+              children: [
+                Center(
+                  child: Hero(
+                    tag: product.image,
+                    child: Image.asset(
+                      product.image,
+                      width: 130,
+                      height: 130,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
-              ),
+                Positioned(
+                  top: 0,
+                  right: 5,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.8),
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 3,
+                        ),
+                      ],
+                    ),
+                    child: IconButton(
+                      icon: const Icon(
+                        Icons.favorite_border,
+                        color: Colors.red,
+                      ),
+                      onPressed: () {
+                        // ❤️ handle favorite tap here
+                      },
+                    ),
+                  ),
+                ),
+              ],
             ),
-            const SizedBox(height: 10),
+
+            const SizedBox(height: 5),
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Flexible(
-                child: Text(
-                  product.title,
-                  style: const TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  overflow: TextOverflow.ellipsis, // prevents overflow
-                  maxLines: 2, // limits to 2 lines
+              child: Text(
+                product.title,
+                style: const TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
                 ),
+                overflow: TextOverflow.ellipsis,
+                maxLines: 2,
               ),
             ),
+
             const SizedBox(height: 10),
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
