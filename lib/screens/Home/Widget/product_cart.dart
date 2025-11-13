@@ -28,7 +28,6 @@ class ProductCart extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // ✅ Image + Heart Button on Top Right
             Stack(
               children: [
                 Center(
