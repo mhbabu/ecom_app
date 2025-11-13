@@ -24,6 +24,7 @@ class _DetailScreenState extends State<DetailScreen> {
       backgroundColor: kcontentColor,
       //for add to cart, icon and quantity
       floatingActionButton: AddToCart(product: widget.product),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

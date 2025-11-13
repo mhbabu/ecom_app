@@ -1,3 +1,4 @@
+import 'package:ecom_app/constants.dart';
 import 'package:ecom_app/models/product.dart';
 import 'package:flutter/material.dart';
 
@@ -49,6 +50,28 @@ class _AddToCartState extends State<AddToCart> {
                     icon: Icon(Icons.add, color: Colors.white),
                   ),
                 ],
+              ),
+            ),
+
+            const SizedBox(width: 20),
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                height: 55,
+                decoration: BoxDecoration(
+                  color: kPrimaryColor,
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                alignment: Alignment.center,
+                padding: EdgeInsets.symmetric(horizontal: 50),
+                child: const Text(
+                  "Add to Cart",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
               ),
             ),
           ],
