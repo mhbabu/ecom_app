@@ -13,7 +13,9 @@ class ProductCart extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => DetailScreen(product: product)),
+          MaterialPageRoute(
+            builder: (context) => DetailScreen(product: product),
+          ),
         );
       },
       child: Container(
@@ -27,11 +29,14 @@ class ProductCart extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
-              child: Image.asset(
-                product.image,
-                width: 130,
-                height: 130,
-                fit: BoxFit.cover,
+              child: Hero(
+                tag: product.image,
+                child: Image.asset(
+                  product.image,
+                  width: 130,
+                  height: 130,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             const SizedBox(height: 10),
